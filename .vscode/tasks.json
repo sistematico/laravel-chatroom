@@ -1,0 +1,100 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Composer Install",
+      "command": "composer",
+      "args": [
+        "install"
+      ],
+      "detail": "composer install",
+      "group": "none",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Artisan Serve",
+      "type": "shell",
+      "command": "php",
+      "detail": "php artisan serve",
+      "group": "none",
+      "args": [
+        "artisan",
+        "serve",
+        "--env=local"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "NPM Install",
+      "type": "npm",
+      "script": "install",
+      "problemMatcher": [],
+      "detail": "npm install",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "NPM Dev",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "detail": "npm run dev",
+      "group": "none",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "NPM Build",
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": [],
+      "detail": "pnpm build",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Run Laravel Echo Server",
+      "command": "laravel-echo-server",
+      "args": ["start"],
+      "detail": "laravel-echo-server start",
+      "group": "none",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "new"
+      }
+    }
+  ]
+}
