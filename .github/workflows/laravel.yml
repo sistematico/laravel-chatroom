@@ -38,7 +38,7 @@ jobs:
           git fetch --all && git reset --hard origin/main
           git pull origin main
           [ -f .env ] || cp .env.example .env
-          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --optimize-autoloader --no-dev
+          [ -f composer.lock ] && composer update -q || composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --optimize-autoloader --no-dev
           php artisan migrate:fresh --force --seed -q
           npm install
           npm run build
